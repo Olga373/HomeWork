@@ -9,10 +9,10 @@ class Car:
         return f"{self.color}{self.type}{self.year}"
 
     def started (self):
-        return f"The car started"
+        return "The car started"
 
     def car_off (self):
-        return f"The car turned off"
+        return "The car turned off"
 
 
 
