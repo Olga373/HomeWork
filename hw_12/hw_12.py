@@ -33,7 +33,17 @@ class User:
             if self.profession == "teacher":
                 return f"{User.__str__(self)}"
 
+    def doctor(self):
+        doctor = User.__str__(self)
+        return doctor
 
+    def policeman(self):
+        policeman = User.__str__(self)
+        return policeman
+
+    def teacher(self):
+        teacher = User.__str__(self)
+        return teacher
 
 user_1 = User(name="Nik", surname="Black", age=39, country="UK", gender="m", professoin="doctor")
 user_2 = User("Tom", "Short", 40, "USA", "m", "policeman")
@@ -43,13 +53,13 @@ user_3 = User("Kate", "Corn", 26, "France", "w", "teacher")
 #print(user_1)
 print(user_1.birth_year())
 print(user_1.email())
-print(user_1.prof())
+print(user_1.doctor())
 
 print(user_2.birth_year())
 print(user_2.email())
-print(user_2.prof())
+print(user_2.policeman())
 
 print(user_3.birth_year())
 print(user_3.email())
-print(user_3.prof())
+print(user_3.teacher())
 
