@@ -15,5 +15,5 @@ class Triangle:
             print("Ttingle is not possible")
 
 tringle = Triangle([5, 1, 2])
-tringle.is_possible()
+print(tringle.is_possible())
 

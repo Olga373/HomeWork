@@ -26,14 +26,7 @@ class User:
         return f"{self.name + self.surname}@gmail.ru"
 
 
-    def prof(self) -> UserAnnotation:
-        if self.profession == "doctor" or self.profession == "policeman":
-            return f"{User.__str__(self)}"
-        else:
-            if self.profession == "teacher":
-                return f"{User.__str__(self)}"
-
-    def doctor(self):
+      def doctor(self):
         doctor = User.__str__(self)
         return doctor
 
