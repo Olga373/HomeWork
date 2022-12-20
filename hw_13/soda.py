@@ -1,20 +1,18 @@
 
 class Soda:
-    def __init__(self, additive: str):
+    def __init__(self, additive: str = None):
         self.additive = additive
-
 
     def __str__(self):
         return f"{self.additive}"
 
     def show_my_drink(self):
-        if self.additive == "wihtout_additive":
-            print(f"Regular soda")
+        if self.additive is None:
+            return "Just soda"
         else:
-            print(f"Soda and {Soda.__str__(self)}")
+            return f"Soda and {self.additive}"
 
-
-soda_1 = Soda("without_additive")
+soda_1 = Soda()
 soda_2 = Soda("vanilla")
 
 

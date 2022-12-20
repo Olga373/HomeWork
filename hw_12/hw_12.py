@@ -26,7 +26,7 @@ class User:
         return f"{self.name + self.surname}@gmail.ru"
 
 
-      def doctor(self):
+    def doctor(self):
         doctor = User.__str__(self)
         return doctor
 

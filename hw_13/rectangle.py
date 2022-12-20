@@ -1,18 +1,10 @@
-class Rectagle:
-    def __init__(self, side_a, side_b):
-        self.side_a = int(side_a)
-        self.side_b = int(side_b)
+def rectangle_square(a, b):
+     s = a * b
+     return s
 
-    #def __str__(self):
-        #return f"{self.side_a}, {self.side_b}, {self.side_c}"
+def rectangle_perim(a, b):
+     p = (a + b) * 2
+     return p
 
-    def square(self):
-        return self.side_a * self.side_b
-
-    def perim(self):
-        return (self.side_a + self.side_b) * 2
-
-rectangle = Rectagle("4", "2")
-#print(rectangle.perim())
-#print(rectangle.square())
+#print(rectangle_square(4, 5), rectangle_perim(4, 5))
 
