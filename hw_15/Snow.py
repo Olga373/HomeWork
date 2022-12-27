@@ -1,25 +1,28 @@
 class Snow:
-    def __init__(self, n: int):
-        self.n = "*" * n
+    def __init__(self, snowflake_count: int):
+        self.snowflake_count = "*" * snowflake_count
 
     def __str__(self):
-        return self.n
+        return self.snowflake_count
 
-    def __add__(self, n):
-        return self.n + "*" * n
+    def __add__(self, other):
+        return self.snowflake_count + "*" * other
 
-    def __sub__(self, n):
-        return "*" * (len(self.n) - len('*' * n))
+    def __sub__(self, other):
+        return "*" * (len(self.snowflake_count) - len('*' * other))
 
-    def __mul__(self, n):
-        return self.n * n
+    def __mul__(self, other):
+        return self.snowflake_count * other
 
-    def __truediv__(self, n):
-       return "*" * int((len(self.n) / len('*' * n)))
+    def __truediv__(self, other):
+       return "*" * int((len(self.snowflake_count) / len('*' * other)))
 
-    def makeSnow(self, k):
-        s = (self.n + '\\n') * k
-        return s
+    def makeSnow(self, snowflake_array: int):
+        for _ in range(len(self.snowflake_count) // snowflake_array):
+            print("*" * snowflake_array)
+        print(len(self.snowflake_count) % snowflake_array * "*")
+
+
 
 a = Snow(6)
 print(a)
