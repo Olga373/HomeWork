@@ -7,9 +7,9 @@ def fib(n: int):
         fib_1, fib_2 = fib_2, fib_1 + fib_2
         print(fib_2, end=' ')
 
-print(fib(10))
-
-print(sys.getsizeof(fib(10)))
+f_1 = fib(10)
+print(f_1)
+print(sys.getsizeof(f_1))
 
 def gen_fib(n: int):
     fib_1 = fib_2 = 1
@@ -18,5 +18,7 @@ def gen_fib(n: int):
         fib_1, fib_2 = fib_2, fib_1 + fib_2
         yield (fib_2)
 
-print(gen_fib(10))
-print(sys.getsizeof(gen_fib(10)))
+
+f_2 = gen_fib(10)
+print(f_2)
+print(sys.getsizeof(f_2))
